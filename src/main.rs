@@ -70,7 +70,7 @@ fn main() {
     let pid = attach(cli.pid, cli.program, cli.args);
 
     // wait for the child process
-    waitpid(pid, None).unwrap();
+    let wait_status = waitpid(pid, None).unwrap();
 
     // can inspect child prcoess now
 }
